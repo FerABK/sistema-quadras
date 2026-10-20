@@ -1,0 +1,388 @@
+@import url('https://fonts.bunny.net/css?family=figtree:400,500,600,700&display=swap');
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../views/**/*.blade.php';
+@source '../js/**/*.js';
+
+/* Configuração geral */
+
+:root {
+    font-family: Figtree, Arial, sans-serif;
+    color: #172033;
+    background: #f4f6fa;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+h1,
+h2,
+p {
+    overflow-wrap: anywhere;
+}
+
+/* Menu superior */
+
+.topbar {
+    background: #14213d;
+    color: white;
+    padding: 15px 0;
+}
+
+.topbar .inner {
+    max-width: 1120px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.topbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.topbar a:hover {
+    color: #bfdbfe;
+}
+
+.brand {
+    font-weight: 700;
+    font-size: 20px;
+    margin-right: auto;
+}
+
+/* Conteúdo */
+
+.container {
+    max-width: 1120px;
+    margin: auto;
+    padding: 32px 20px;
+}
+
+.page-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 8px;
+}
+
+.h2 {
+    font-size: 21px;
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+.muted {
+    color: #64748b;
+}
+
+/* Cartões */
+
+.card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 22px;
+    margin-bottom: 18px;
+    box-shadow: 0 3px 12px #14213d0a;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+/* Botões */
+
+.btn {
+    display: inline-block;
+    border: 0;
+    border-radius: 7px;
+    padding: 10px 15px;
+    background: #2457c5;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #1d46a0;
+}
+
+.btn.secondary {
+    background: #475569;
+    color: white;
+}
+
+.btn.secondary:hover {
+    background: #334155;
+}
+
+.btn.danger {
+    background: #b42318;
+    color: white;
+}
+
+.btn.danger:hover {
+    background: #8f1d14;
+}
+
+.btn.light {
+    background: #e8eefb;
+    color: #17356e;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.actions form {
+    margin: 0;
+}
+
+/* Formulários gerais */
+
+label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    margin: 5px 0 14px;
+    font: inherit;
+    background: white;
+    color: #172033;
+}
+
+.form-control:focus {
+    outline: 2px solid #93c5fd;
+    border-color: #2457c5;
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+.field-error {
+    color: #b42318;
+    font-size: 14px;
+}
+
+/* Mensagens */
+
+.alert {
+    padding: 12px 15px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    background: #dcfce7;
+    color: #166534;
+}
+
+.alert.error {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* Tabelas */
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.table th,
+.table td {
+    padding: 10px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table th {
+    background: #f1f5f9;
+}
+
+/* Imagens das quadras */
+
+.quadra-img {
+    width: 140px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Páginas de login e cadastro */
+
+.inline {
+    display: inline;
+}
+
+.auth-card {
+    max-width: 460px;
+    margin: 40px auto;
+}
+
+/* Página de avaliações */
+
+.evaluation-card {
+    padding: 24px;
+    transition: box-shadow 0.2s;
+}
+
+.evaluation-card:hover {
+    box-shadow: 0 5px 18px #14213d12;
+}
+
+.evaluation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.evaluation-header .h2 {
+    margin-bottom: 6px;
+}
+
+.evaluation-header p {
+    margin: 0;
+}
+
+.evaluation-rating {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    white-space: nowrap;
+}
+
+.evaluation-rating strong {
+    margin-left: 8px;
+    color: #172033;
+}
+
+.star {
+    color: #cbd5e1;
+    font-size: 22px;
+}
+
+.star.filled {
+    color: #e6a817;
+}
+
+.evaluation-comment {
+    margin-top: 20px;
+    padding: 16px;
+    background: #f8fafc;
+    border-radius: 8px;
+}
+
+.evaluation-comment strong {
+    font-size: 14px;
+}
+
+.evaluation-comment p {
+    margin: 8px 0 0;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+.evaluation-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.evaluation-form-card {
+    max-width: 700px;
+}
+
+.evaluation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.evaluation-form .form-control {
+    margin-bottom: 12px;
+}
+
+.evaluation-form .actions {
+    margin-top: 8px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.empty-state p {
+    margin-bottom: 22px;
+}
+
+/* Telas pequenas */
+
+@media (max-width: 600px) {
+    .container {
+        padding: 22px 14px;
+    }
+
+    .topbar .inner {
+        gap: 12px;
+        padding: 0 14px;
+    }
+
+    .brand {
+        width: 100%;
+    }
+
+    .h1 {
+        font-size: 24px;
+    }
+
+    .evaluation-card {
+        padding: 18px;
+    }
+
+    .evaluation-footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
